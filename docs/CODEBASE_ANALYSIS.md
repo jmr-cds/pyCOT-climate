@@ -325,6 +325,8 @@ The `.pkl` files are cached ERC computations. They become stale if the ERC code 
 
 Environment: `pip install rustworkx scipy numpy pandas sympy networkx matplotlib pytest`.
 
+Scripts: `scripts/analysis/sensitivity/sens.py <network.txt ...>` produces the table below. `scripts/analysis/sensitivity/nc.py [network.txt]` lists the non-closed SOs (§3 item 1).
+
 1. `python -m pytest -q src/pyCOT/tests --ignore=src/pyCOT/tests/test_load_from_file.py` gives 124 passed, 2 failed.
 2. For each of `data/Examples_tests/Farm.txt`, `data/biochemical_databases/BiGG/bigg_e_coli_core.txt` and `data/biochemical_databases/biomodels_all_txt/BIOMD0000000943.txt`:
    - Run `compute_organizations(rn, max_so_order=m, verify_organizations=False)` for m ∈ {2, 5, 10, 100}.
